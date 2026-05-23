@@ -200,3 +200,47 @@ footer {
   top: 0;
   z-index: 1000;
 }
+
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-links {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #4b7caa;
+    padding: 15px 0;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 12px 0;
+    font-size: 18px;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}
