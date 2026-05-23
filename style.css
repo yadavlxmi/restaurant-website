@@ -214,13 +214,13 @@ footer {
 }
 
 .nav-links {
-  text-align: center;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
 
   nav {
-    text-align: center;
+    text-align: left;
   }
 
   .hamburger {
