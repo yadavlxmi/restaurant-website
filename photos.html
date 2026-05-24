@@ -44,14 +44,32 @@
 
 <div class="photo-container">
 
-<img src="images/Chowmein.webp">
-<img src="images/Steamedmomo.png">
-<img src="images/friedmomo.png">
-<img src="images/legpiece.png">
+<img src="images/Chowmein.webp" onclick="openImage(this.src)">
+<img src="images/Steamedmomo.png" onclick="openImage(this.src)">
+<img src="images/friedmomo.png" onclick="openImage(this.src)">
+<img src="images/legpiece.png" onclick="openImage(this.src)">
 
 </div>
 
 </section>
+
+<div id="imagePopup" class="popup">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img class="popup-content" id="popupImg">
+</div>
+
+<script>
+
+function openImage(src) {
+  document.getElementById("imagePopup").style.display = "flex";
+  document.getElementById("popupImg").src = src;
+}
+
+function closeImage() {
+  document.getElementById("imagePopup").style.display = "none";
+}
+
+</script>
 
 </body>
 </html>

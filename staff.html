@@ -9,7 +9,7 @@
 <div class="sticky-top">
 
 <header>
-  <img src="images/logo.jpeg" alt="Laxmi Hotel Logo" class="logo">
+  <img src="images/logo.jpeg" alt="Laxmi Hotel Logo" class="logo" >
 
   <div class="header-text">
     <h1>Laxmi Hotel & Restaurant</h1>
@@ -45,19 +45,19 @@
 <div class="staff-container">
 
 <div class="card">
-  <img src="images/owner.png">
+  <img src="images/owner.png" onclick="openImage(this.src)">
   <h3>Ambika Yadav</h3>
   <p>Head Chef</p>
 </div>
 
 <div class="card">
-  <img src="images/Shiv.jpeg">
+  <img src="images/Shiv.jpeg" onclick="openImage(this.src)">
   <h3>Shiv Yadav</h3>
   <p>Restaurant Manager</p>
 </div>
 
 <div class="card">
-  <img src="images/Madhav.jpeg">
+  <img src="images/Madhav.jpeg" onclick="openImage(this.src)">
   <h3>Madhav Yadav</h3>
   <p>Chef</p>
 </div>
@@ -65,6 +65,24 @@
 </div>
 
 </section>
+
+<div id="imagePopup" class="popup">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img class="popup-content" id="popupImg">
+</div>
+
+<script>
+
+function openImage(src) {
+  document.getElementById("imagePopup").style.display = "flex";
+  document.getElementById("popupImg").src = src;
+}
+
+function closeImage() {
+  document.getElementById("imagePopup").style.display = "none";
+}
+
+</script>
 
 </body>
 </html>

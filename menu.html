@@ -46,28 +46,28 @@
 <div class="menu-container">
 
 <div class="card">
-  <img src="images/Chowmein.webp">
+  <img src="images/Chowmein.webp" onclick="openImage(this.src)">
   <h3>Chowmein</h3>
   <p>Delicious stir fried noodles.</p>
   <p class="price">from Rs 90</p>
 </div>
 
 <div class="card">
-  <img src="images/Steamedmomo.png">
+  <img src="images/Steamedmomo.png" onclick="openImage(this.src)">
   <h3>Steamed Momo</h3>
   <p>Nepalese Dumplings.</p>
   <p class="price">from Rs 100</p>
 </div>
 
 <div class="card">
-  <img src="images/friedmomo.png">
+  <img src="images/friedmomo.png" onclick="openImage(this.src)">
   <h3>Fried Momo</h3>
   <p>Crispy fried momo.</p>
   <p class="price">From Rs 110</p>
 </div>
 
 <div class="card">
-  <img src="images/legpiece.png">
+  <img src="images/legpiece.png" onclick="openImage(this.src)">
   <h3>Chicken Leg Piece</h3>
   <p>Spicy grilled chicken.</p>
   <p class="price">From Rs 100</p>
@@ -76,6 +76,24 @@
 </div>
 
 </section>
+
+<div id="imagePopup" class="popup">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img class="popup-content" id="popupImg">
+</div>
+
+<script>
+
+function openImage(src) {
+  document.getElementById("imagePopup").style.display = "flex";
+  document.getElementById("popupImg").src = src;
+}
+
+function closeImage() {
+  document.getElementById("imagePopup").style.display = "none";
+}
+
+</script>
 
 </body>
 </html>
