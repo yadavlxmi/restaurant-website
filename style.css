@@ -208,40 +208,64 @@ footer {
 .hamburger {
   display: none;
   color: white;
-  font-size: 32px;
+  font-size: 35px;
   cursor: pointer;
   font-weight: bold;
 }
 
 .nav-links {
-  text-align: right;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
 
   nav {
     text-align: right;
+    position: relative;
   }
 
   .hamburger {
     display: block;
+    padding-right: 20px;
   }
 
   .nav-links {
     display: none;
-    flex-direction: column;
-    background-color: #4b7caa;
-    padding: 15px 0;
+
+    position: absolute;
+    top: 60px;
+    right: 15px;
+
+    width: 220px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+    padding: 10px;
   }
 
   .nav-links a {
     display: block;
-    margin: 12px 0;
+    color: #3a6f8d;
+
+    padding: 12px 0;
+
+    text-decoration: none;
+
     font-size: 18px;
+
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
   }
 
   #menu-toggle:checked ~ .nav-links {
-    display: flex;
+    display: block;
   }
 }
 
