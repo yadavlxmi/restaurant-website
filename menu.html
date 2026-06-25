@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sticky-top">
+
+<header>
+  <img src="images/logo.jpeg" alt="Laxmi Hotel Logo" class="logo">
+
+  <div class="header-text">
+    <h1>Laxmi Hotel & Restaurant</h1>
+    <p>Fresh Food | Friendly Service | Beautiful Taste</p>
+  </div>
+</header>
+
+<nav>
+  <input type="checkbox" id="menu-toggle">
+
+  <label for="menu-toggle" class="hamburger">
+    ☰
+  </label>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="photos.html">Photos</a>
+    <a href="specials.html">Chef Specials</a>
+    <a href="staff.html">Staff</a>
+    <a href="tables.html">Tables</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+</div>
+
+<section>
+
+<h2>Our Menu</h2>
+
+<div class="menu-container">
+
+<div class="card">
+  <img src="images/Chowmein.webp" onclick="openImage(this.src)">
+  <h3>Chowmein</h3>
+  <p>Delicious stir fried noodles with meat of your choice.</p>
+  <p class="price">Veg Fullplate from Rs 80<br>Chicken Fullplate From Rs 240<br>Egg Fullplate From Rs 140</p>
+</div>
+
+<div class="card">
+  <img src="images/Steamedmomo.png" onclick="openImage(this.src)">
+  <h3>Steamed Momo</h3>
+  <p>Nepalese Dumplings.</p>
+  <p class="price">from Rs 100</p>
+</div>
+
+<div class="card">
+  <img src="images/friedmomo.png" onclick="openImage(this.src)">
+  <h3>Fried Momo</h3>
+  <p>Crispy fried momo.</p>
+  <p class="price">From Rs 110</p>
+</div>
+
+<div class="card">
+  <img src="images/legpiece.png" onclick="openImage(this.src)">
+  <h3>Chicken Leg Piece</h3>
+  <p>Spicy grilled chicken.</p>
+  <p class="price">From Rs 100</p>
+</div>
+
+<div class="card">
+  <img src="images/bhutuwa.jpeg" onclick="openImage(this.src)">
+  <h3>Goat Bhutuwa</h3>
+  <p>a traditional, spiced stir-fry or pan-fried dish with meat of your choice</p>
+  <p class="price">From Rs 300</p>
+</div>
+
+</div>
+
+</section>
+
+<div id="imagePopup" class="popup">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img class="popup-content" id="popupImg">
+</div>
+
+<script>
+
+function openImage(src) {
+  document.getElementById("imagePopup").style.display = "flex";
+  document.getElementById("popupImg").src = src;
+}
+
+function closeImage() {
+  document.getElementById("imagePopup").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

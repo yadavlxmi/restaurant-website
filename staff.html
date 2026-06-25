@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Staff</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sticky-top">
+
+<header>
+  <img src="images/logo.jpeg" alt="Laxmi Hotel Logo" class="logo" >
+
+  <div class="header-text">
+    <h1>Laxmi Hotel & Restaurant</h1>
+    <p>Fresh Food | Friendly Service | Beautiful Taste</p>
+  </div>
+</header>
+
+<nav>
+  <input type="checkbox" id="menu-toggle">
+
+  <label for="menu-toggle" class="hamburger">
+    ☰
+  </label>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="photos.html">Photos</a>
+    <a href="specials.html">Chef Specials</a>
+    <a href="staff.html">Staff</a>
+    <a href="tables.html">Tables</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+</div>
+
+<section>
+
+<h2>Staff Members</h2>
+
+<div class="staff-container">
+
+<div class="card">
+  <img src="images/owner.png" onclick="openImage(this.src)">
+  <h3>Ambika Yadav</h3>
+  <p>Head Chef</p>
+</div>
+
+<div class="card">
+  <img src="images/Shiv.jpeg" onclick="openImage(this.src)">
+  <h3>Shiv Yadav</h3>
+  <p>Restaurant Manager</p>
+</div>
+
+<div class="card">
+  <img src="images/Madhav.jpeg" onclick="openImage(this.src)">
+  <h3>Madhav Yadav</h3>
+  <p>Chef</p>
+</div>
+
+</div>
+
+</section>
+
+<div id="imagePopup" class="popup">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img class="popup-content" id="popupImg">
+</div>
+
+<script>
+
+function openImage(src) {
+  document.getElementById("imagePopup").style.display = "flex";
+  document.getElementById("popupImg").src = src;
+}
+
+function closeImage() {
+  document.getElementById("imagePopup").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

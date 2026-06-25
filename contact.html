@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sticky-top">
+
+<header>
+  <img src="images/logo.jpeg" alt="Laxmi Hotel Logo" class="logo">
+
+  <div class="header-text">
+    <h1>Laxmi Hotel & Restaurant</h1>
+    <p>Fresh Food | Friendly Service | Beautiful Taste</p>
+  </div>
+</header>
+
+<nav>
+  <input type="checkbox" id="menu-toggle">
+
+  <label for="menu-toggle" class="hamburger">
+    ☰
+  </label>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="photos.html">Photos</a>
+    <a href="specials.html">Chef Specials</a>
+    <a href="staff.html">Staff</a>
+    <a href="tables.html">Tables</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+</div>
+
+<section>
+
+<h2>Contact Us</h2>
+
+<div class="contact-info">
+
+<p><strong>Address:</strong>Shivgadhiya Chowk, Lumbini Sanskritik-8, Ekala, Lumbini Nepal 32900</p>
+<p><strong>Phone:</strong> +9779806983119</p>
+<p><strong>Email:</strong> laxmihotel3119@gmail.com</p>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+</section>
+
+<div id="imagePopup" class="popup">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img class="popup-content" id="popupImg">
+</div>
+
+<script>
+
+function openImage(src) {
+  document.getElementById("imagePopup").style.display = "flex";
+  document.getElementById("popupImg").src = src;
+}
+
+function closeImage() {
+  document.getElementById("imagePopup").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
